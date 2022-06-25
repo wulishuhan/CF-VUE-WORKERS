@@ -8,7 +8,7 @@
      }
    },
    actions: {
-     updateName(name) {
+     updateName(name: string) {
        this.name = name
      }
    }
