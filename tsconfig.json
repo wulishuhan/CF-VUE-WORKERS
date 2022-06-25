@@ -1,42 +1,24 @@
 {
   "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types", // 默认值
+      "src/types"
+   ],
     "target": "esnext",
+    "useDefineForClassFields": true,
     "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "jest"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "baseUrl": "./",
+    "paths":{
+      "@": ["src"],
+      "@/*": ["src/*"],
+    }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
