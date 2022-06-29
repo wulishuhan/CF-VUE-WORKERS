@@ -7,6 +7,12 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "vue-cli-service lint"
+  },
   "dependencies": {
     "vue": "^3.2.25"
   },
