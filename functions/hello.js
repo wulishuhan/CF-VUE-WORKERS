@@ -1,8 +1,8 @@
 export async function onRequest({ env }) {
   const task = await env.TEST.get("a");
-  env.TEST.put("a", {
+  env.TEST.put("c", {
     name: "shuhan",
-    age: 23,
+    age: 24,
   });
   return new Response(task);
 }
