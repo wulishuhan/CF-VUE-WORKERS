@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useUserStore } from "@/store/user";
+import { useUserStore } from '@/store/user';
 
 const userStore = useUserStore();
-userStore.updateName("李四");
+userStore.updateName('李四');
 </script>

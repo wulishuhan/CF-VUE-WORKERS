@@ -5,11 +5,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { useMouse } from "@vueuse/core";
+import { defineComponent } from 'vue';
+import { useMouse } from '@vueuse/core';
 
 export default defineComponent({
-  name: "VueUse",
+  name: 'VueUse',
   setup() {
     const { x, y } = useMouse();
 

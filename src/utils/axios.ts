@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from "axios";
+import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 
 const service = axios.create(); // Request interceptors
 
@@ -9,7 +9,7 @@ service.interceptors.request.use(
   },
   (error: any) => {
     Promise.reject(error);
-  }
+  },
 ); // Response interceptors
 
 service.interceptors.response.use(
@@ -19,7 +19,7 @@ service.interceptors.response.use(
   (error: any) => {
     // do something
     return Promise.reject(error);
-  }
+  },
 );
 
 export default service;
