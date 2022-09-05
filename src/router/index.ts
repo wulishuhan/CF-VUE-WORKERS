@@ -19,6 +19,16 @@ const routes: Array<RouteRecordRaw> = [
       keepAlive: true,
       requireAuth: true,
     },
+    component: () => import('@/pages/index.vue'),
+  },
+  {
+    path: '/introduce',
+    name: 'introduce',
+    meta: {
+      title: '个人介绍',
+      keepAlive: true,
+      requireAuth: true,
+    },
     component: () => import('@/pages/introduce.vue'),
   },
 ];
