@@ -5,7 +5,7 @@
       <div class="logo"></div>
       <div class="menu">
         <a href="#" class="menuItem">首页</a>
-        <a @click="toIntroduce" href="/introduce" class="menuItem">个人介绍</a>
+        <a href="/introduce" class="menuItem">个人介绍</a>
       </div>
     </div>
     <div class="pages" ref="pages">
@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import * as THREE from "three";
 import { ref, onMounted } from "vue";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -33,9 +33,6 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import { gsap } from "gsap";
 let screenDom = ref(null);
 let pages = ref(null);
-function toIntroduce() {
-  router.push("/introduce")
-}
 onMounted(() => {
   // 创建场景
   let scene = new THREE.Scene();
@@ -98,7 +95,6 @@ onMounted(() => {
         duration: 0.5,
         x: y,
         y: x,
-        duration: 1,
       });
     });
   });
@@ -117,7 +113,6 @@ onMounted(() => {
         duration: 0.5,
         x: y,
         y: x,
-        duration: 1,
       });
     });
   });
@@ -136,7 +131,6 @@ onMounted(() => {
         duration: 0.5,
         x: y,
         y: x,
-        duration: 1,
       });
     });
   });
@@ -144,13 +138,13 @@ onMounted(() => {
   let page = 0;
   let timeline2 = gsap.timeline();
   window.addEventListener("mousewheel", (e) => {
-    if (e.wheelDelta < 0) {
+    if (e['wheelDelta'] < 0) {
       page++;
       if (page > 2) {
         page = 2;
       }
     }
-    if (e.wheelDelta > 0) {
+    if (e['wheelDelta'] > 0) {
       page--;
       if (page < 0) {
         page = 0;
@@ -161,12 +155,10 @@ onMounted(() => {
         duration: 0.5,
 
         y: page * -8,
-        duration: 1,
       });
       gsap.to(pages.value, {
         duration: 1,
         y: -page * window.innerHeight,
-        duration: 1,
       });
     }
   });
