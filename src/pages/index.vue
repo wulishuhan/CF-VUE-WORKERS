@@ -2,7 +2,6 @@
   <div class="home">
     <div class="canvas-container" ref="screenDom"></div>
     <div class="header">
-      <div class="logo"></div>
       <div class="menu">
         <a href="#" class="menuItem">首页</a>
         <a href="/introduce" class="menuItem">个人介绍</a>
@@ -232,7 +231,7 @@ body {
 .header .logo {
   height: 100px;
   width: 300px;
-  background-image: url("../assets/logo.png");
+  background-image: url('../assets/logo.png');
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -284,7 +283,7 @@ body {
   color: #fff;
 }
 
-.progress>img {
+.progress > img {
   padding: 0 15px;
 }
 
