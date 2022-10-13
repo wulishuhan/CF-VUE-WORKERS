@@ -31,6 +31,16 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import('@/pages/introduce.vue'),
   },
+  {
+    path: '/dsbridge',
+    name: 'dsbridge',
+    meta: {
+      title: 'Dsbridge',
+      keepAlive: true,
+      requireAuth: true,
+    },
+    component: () => import('@/pages/dsbridge.vue'),
+  }
 ];
 
 const router = createRouter({
