@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-// var dsBridge = require('dsbridge');
 import dsBridge from 'dsbridge';
 onMounted(() => {
   //同步调用
